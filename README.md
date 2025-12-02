@@ -79,150 +79,80 @@ src/
 
 ------------------------------------------------------
 
-🧩 Features Implemented
-✔ High-Performance User List
+✨ Key Features
+1️⃣ High-Performance User List
 
-Handles 1000+ users from API
-
-Optimized FlatList (batching, clipping, window size)
-
-Memoized UserCard
-
-Pull-to-refresh
-
-Smooth scrolling on low-end devices
-
-✔ Offline-First Architecture
-
-  * Loads cached data instantly
-  * Fetches fresh data in background
-  * Merges intelligently (deduped by UUID)
-  * Zero visible delay after first run
-
-✔ Real-Time Search + Multi-Filters
-
-  * Search by first name, last name, and email
-  * Filter by gender (male/female)
-  * Filter by country (generated dynamically)
-  * Instant updates with zero UI stutter
-  * Memoized filtered list
-
-✔ Favorites System
-
-  * Add/remove favorites globally
-  * Favorites screen with count
-  * Cached and persistent
-
-✔ Full Analytics Dashboard
-
-  * Total users
-  * Countries count
-  * Average age
-  * Median age
-  * Oldest & youngest
-  * Gender breakdown (count + percent)
-  * Age distribution by decade
-  * Top 10 countries
-  * Insight cards
-
-✔ Smooth Navigation
-
-  * Bottom tabs (Home, Analytics, Favorites)
-  * Stack navigation for additional screens
-
-✔ Clean & Modern UI
-
-  * Professional color theme
-  * Rounded cards
-  * Shadows & spacing
-  * Reusable components
-
-✔ Error Handling
-
-  * Graceful error state
-  * Retry button
-  * Auto-cancels pending requests with AbortController
-
--------------------------------------------------------------
-
-⚡ Performance Optimizations
-🔹 FlatList Optimization
+✅ Renders 1000+ users smoothly
+✅ Optimized FlatList with smart batching
+✅ Memoized UserCard components (prevent re-renders)
+✅ Pull-to-refresh functionality
+✅ Works seamlessly on low-end Android devices
+How?
 ```
-maxToRenderPerBatch={20}
-updateCellsBatchingPeriod={50}
-initialNumToRender={20}
-removeClippedSubviews={true}
-showsVerticalScrollIndicator={false}
+- maxToRenderPerBatch={20} → Render in chunks
+- updateCellsBatchingPeriod={50} → Batch updates
+- initialNumToRender={20} → Load only visible items
+- removeClippedSubviews={true} → Clean up off-screen views
 ```
 
-🔹 Memoization
+ Offline-First Architecture
 
-  * useMemo for filtered list
-  * useMemo for analytics
-  * React.memo(UserCard)
-  * Cached selectors via Redux
+✅ Instant load from cached data
+✅ Silent background sync when online
+✅ Intelligent UUID-based deduplication
+✅ Zero visible delay after first run
 
-🔹 Offline-First Strategy
-
-  * Cached list loads instantly
-  * API fetch updates silently
-  * Merge strategy avoids full recomputation
-
-🔹 Reduced Re-renders
-
-  * Localized Redux selectors
-  * Split state slices
-  * Pure components
-
-🔹 Request Cancellation
-
-  * Used AbortController to avoid memory leaks and race conditions.
-
-----------------------------------------------------------------------------
-
-🧠 Architecture Decisions
-✔ Redux Toolkit
-
-  * Predictable global state
-  * Immutable reducer logic
-  * Memoized selectors
-  * Easy slicing of users, filters, favorites
-
-✔ expo-router
-
-  * Minimal navigation setup
-  * File-based routing (cleaner structure)
-  * Perfect for multi-screen architecture
-
-✔ Separation of Concerns
-
-  * UI in components
-  * Logic in hooks/services
-  * State in Redux slices
-  * Analytics in a separate memoized block
-
-----------------------------------------------------------------------
-
-📲 How to Run the Project
-Install dependencies:
+Flow:
 ```
-npm install
+App Launch
+  ├─ Load cache (instant)
+  └─ Fetch fresh data (background)
+  
+On Update:
+  ├─ Merge by UUID (avoid duplicates)
+  └─ Update cache & state
 ```
 
-Start development server:
+3️⃣ Real-Time Search + Multi-Filters
+
+✅ Search by first name, last name, email
+✅ Filter by gender (male/female)
+✅ Filter by country (dynamic list)
+✅ Debounced search (300ms) for responsive UI
+✅ Memoized filtering (only recalc when inputs change)
+
+Performance:
 ```
-npx expo start
+User typing "john" → Search input updates instantly
+                  ↓ (300ms delay)
+                  ↓ Filtering runs
+                  ↓ FlatList updates with filtered results
 ```
 
-Build:
-```
-eas build -p android
-eas build -p ios
-```
+4️⃣ Favorites System
 
+✅ Add/remove favorites globally
+✅ Dedicated Favorites screen with count
+✅ Persistent storage (survives app restart)
+✅ Heart icon indication
 
-👨‍💻 Author
+5️⃣ Analytics Dashboard
+Comprehensive statistics on 1000 users:
+MetricExampleTotal Users1000Countries150+Avg Age35 yearsMedian Age34 yearsAge Range18 - 75 yearsGender Split52% M / 48% FAge DistributionGraph by decadeTop CountriesRanked list
 
-Adarsh
-Full Stack & Mobile Developer
-React Native • Expo • TypeScript • Node.js • AWS
+6️⃣ Clean & Modern UI
+
+✅ Professional color scheme (#1A2E46, #F7F9FC)
+✅ Rounded corners & shadows
+✅ Responsive spacing
+✅ Smooth animations
+✅ Dark-mode ready
+
+7️⃣ Error Handling & Resilience
+
+✅ Graceful error states
+✅ One-tap retry button
+✅ Auto-cancels pending requests (AbortController)
+✅ Network error recovery
+
+--------------------------------------------------------------------------------------------
