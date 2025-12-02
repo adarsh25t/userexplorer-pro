@@ -59,5 +59,25 @@ src/
     api.ts
 
   utils/
-```
     type.ts
+```
+
+------------------------------------------------------
+
+🧠 Architecture Decision Summary
+✔ Expo Router for Navigation
+
+Simple file-based navigation, modern Expo standard.
+
+✔ Redux Toolkit
+
+* Stable global state
+* Selectors prevent unnecessary re-renders
+* Clean slices (users, filters, favorites)
+
+✔ Data Flow
+
+```
+loadCache() → read cached users
+fetchUsers() → fetch new users
+```
