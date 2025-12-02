@@ -1,6 +1,7 @@
-# Welcome to your Expo app 👋
+# 📘 UserExplorer Pro — React Native + Expo App 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+🚀 Live Preview (Expo)
+https://expo.dev/…
 
 ## Get started
 
