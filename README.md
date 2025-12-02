@@ -3,13 +3,13 @@
 UserExplorer Pro is a high-performance, offline-first, analytics-driven mobile application built using Expo (React Native) and Redux Toolkit.
 It efficiently renders 1000+ users, performs heavy analytics, supports real-time search, multi-filtering, favorites, and achieves smooth performance even on low-end devices.
 
-<img width="385" height="832" alt="Screenshot 2025-12-02 233707" src="https://github.com/user-attachments/assets/93ad3409-b62c-4c16-abf1-0208aa44b28c" />
+<img width="285" height="832" alt="Screenshot 2025-12-02 233707" src="https://github.com/user-attachments/assets/93ad3409-b62c-4c16-abf1-0208aa44b28c" />
 
-<img width="376" height="820" alt="Screenshot 2025-12-02 233806" src="https://github.com/user-attachments/assets/2593d171-9e56-4810-8373-6b0c00564994" />
+<img width="276" height="820" alt="Screenshot 2025-12-02 233806" src="https://github.com/user-attachments/assets/2593d171-9e56-4810-8373-6b0c00564994" />
 
-<img width="387" height="830" alt="Screenshot 2025-12-02 233828" src="https://github.com/user-attachments/assets/304ca174-78d0-47f1-91a7-8d88827ed381" />
+<img width="287" height="830" alt="Screenshot 2025-12-02 233828" src="https://github.com/user-attachments/assets/304ca174-78d0-47f1-91a7-8d88827ed381" />
 
-<img width="385" height="826" alt="Screenshot 2025-12-02 233844" src="https://github.com/user-attachments/assets/73652cf3-06a9-401f-95fc-e6be487312f8" />
+<img width="285" height="826" alt="Screenshot 2025-12-02 233844" src="https://github.com/user-attachments/assets/73652cf3-06a9-401f-95fc-e6be487312f8" />
 
 
 🚀 Live Preview (Expo)
