@@ -1,23 +1,42 @@
+import { toggleFavorite } from '@/state/favoritesSlice';
 import { Ionicons } from '@expo/vector-icons';
-import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React, { useCallback, useMemo } from 'react';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { useDispatch, useSelector } from 'react-redux';
 
 const UserCard = ({ user }: { user: any }) => {
+
+  const dispatch = useDispatch();
+  // ✅ Get favorites array from Redux
+  const favoriteIds = useSelector((state: any) => state.favorites.ids);
+
+  // ✅ Memoize the check
+  const isFavorite = useMemo(
+    () => favoriteIds.includes(user.login.uuid),
+    [favoriteIds, user.login.uuid]
+  );
+
+  const handleToggleFavorite = useCallback(() => {
+    dispatch(toggleFavorite(user.login.uuid));
+  }, [dispatch, user.login.uuid]);
+
   return (
     <View style={styles.card}>
       <View style={styles.avatarWrapper}>
         <View style={styles.avatarCircle}>
-          <Text style={styles.avatarText}>{user.name.charAt(0)}</Text>
+          {/* user.picture.thumbnail */}
+          <Image source={{ uri: user.picture.thumbnail }} style={styles.avatarImage} />
+          {/* <Text style={styles.avatarText}>{user.name.charAt(0)}</Text> */}
         </View>
       </View>
 
       <View style={styles.cardContent}>
-        <Text style={styles.cardName}>{user.name}</Text>
+        <Text style={styles.cardName}>{user.name.first + " " + user.name.last}</Text>
         <Text style={styles.cardEmail}>{user.email}</Text>
       </View>
 
-      <TouchableOpacity style={styles.likeBtn}>
-        <Ionicons name="heart-outline" size={24} color="#FF5D5D" />
+      <TouchableOpacity style={styles.likeBtn} onPress={handleToggleFavorite}>
+        <Ionicons name={isFavorite ? "heart" : "heart-outline"} size={24} color="#FF5D5D" />
       </TouchableOpacity>
     </View>
   );
@@ -77,6 +96,12 @@ const styles = StyleSheet.create({
   cardContent: {
     flex: 1,
     justifyContent: "center",
+  },
+
+  avatarImage: {
+    height: 45,
+    width: 45,
+    borderRadius: 25,
   },
 
   cardName: {
