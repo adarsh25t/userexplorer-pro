@@ -84,74 +84,132 @@ Smooth scrolling on low-end devices
 
 ✔ Offline-First Architecture
 
-Loads cached data instantly
-
-Fetches fresh data in background
-
-Merges intelligently (deduped by UUID)
-
-Zero visible delay after first run
+  * Loads cached data instantly
+  * Fetches fresh data in background
+  * Merges intelligently (deduped by UUID)
+  * Zero visible delay after first run
 
 ✔ Real-Time Search + Multi-Filters
 
-Search by first name, last name, and email
-
-Filter by gender (male/female)
-
-Filter by country (generated dynamically)
-
-Instant updates with zero UI stutter
-
-Memoized filtered list
+  * Search by first name, last name, and email
+  * Filter by gender (male/female)
+  * Filter by country (generated dynamically)
+  * Instant updates with zero UI stutter
+  * Memoized filtered list
 
 ✔ Favorites System
 
-Add/remove favorites globally
-
-Favorites screen with count
-
-Cached and persistent
+  * Add/remove favorites globally
+  * Favorites screen with count
+  * Cached and persistent
 
 ✔ Full Analytics Dashboard
 
-Total users
-
-Countries count
-
-Average age
-
-Median age
-
-Oldest & youngest
-
-Gender breakdown (count + percent)
-
-Age distribution by decade
-
-Top 10 countries
-
-Insight cards
+  * Total users
+  * Countries count
+  * Average age
+  * Median age
+  * Oldest & youngest
+  * Gender breakdown (count + percent)
+  * Age distribution by decade
+  * Top 10 countries
+  * Insight cards
 
 ✔ Smooth Navigation
 
-Bottom tabs (Home, Analytics, Favorites)
-
-Stack navigation for additional screens
+  * Bottom tabs (Home, Analytics, Favorites)
+  * Stack navigation for additional screens
 
 ✔ Clean & Modern UI
 
-Professional color theme
-
-Rounded cards
-
-Shadows & spacing
-
-Reusable components
+  * Professional color theme
+  * Rounded cards
+  * Shadows & spacing
+  * Reusable components
 
 ✔ Error Handling
 
-Graceful error state
+  * Graceful error state
+  * Retry button
+  * Auto-cancels pending requests with AbortController
 
-Retry button
+-------------------------------------------------------------
 
-Auto-cancels pending requests with AbortController
+⚡ Performance Optimizations
+🔹 FlatList Optimization
+```
+maxToRenderPerBatch={20}
+updateCellsBatchingPeriod={50}
+initialNumToRender={20}
+removeClippedSubviews={true}
+showsVerticalScrollIndicator={false}
+```
+
+--------------------------------------------------------------
+
+🔹 Memoization
+
+  * useMemo for filtered list
+  * useMemo for analytics
+  * React.memo(UserCard)
+  * Cached selectors via Redux
+
+🔹 Offline-First Strategy
+
+  * Cached list loads instantly
+  * API fetch updates silently
+  * Merge strategy avoids full recomputation
+
+🔹 Reduced Re-renders
+
+  * Localized Redux selectors
+  * Split state slices
+  * Pure components
+
+🔹 Request Cancellation
+
+  * Used AbortController to avoid memory leaks and race conditions.
+
+----------------------------------------------------------------------------
+
+🧠 Architecture Decisions
+✔ Redux Toolkit
+
+Chosen for:
+
+  * Predictable global state
+  * Immutable reducer logic
+  * Memoized selectors
+  * Easy slicing of users, filters, favorites
+
+✔ expo-router
+
+  * Minimal navigation setup
+  * File-based routing (cleaner structure)
+  * Perfect for multi-screen architecture
+
+✔ Separation of Concerns
+
+  * UI in components
+  * Logic in hooks/services
+  * State in Redux slices
+  * Analytics in a separate memoized block
+
+----------------------------------------------------------------------
+
+📲 How to Run the Project
+Install dependencies:
+```
+npm install
+```
+
+Start development server:
+```
+npx expo start
+```
+
+Build:
+```
+eas build -p android
+eas build -p ios
+```
