@@ -16,7 +16,7 @@ https://expo.dev/…
 ---------------------------------------------------
 
 📁 Project Structure
-app/
+```app/
   _layout.tsx
   (tabs)/
     _layout.tsx
@@ -59,4 +59,5 @@ src/
     api.ts
 
   utils/
+```
     type.ts
