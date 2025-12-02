@@ -54,16 +54,6 @@ A production-grade, high-performance mobile application demonstrating advanced R
 
 ## 🎯 Performance Achievements
 
-### Rendering Performance
-```
-Metric                  Target      Achieved    Status
-─────────────────────────────────────────────────────
-FPS while scrolling     60 FPS      59-60 FPS   ✅ PASS
-Initial render time     < 2s        1.2s        ✅ PASS
-Search response         < 300ms     < 100ms     ✅ PASS
-Memory usage            < 100MB     ~85MB       ✅ PASS
-TTI (Time to Interactive) < 1s      0.8s        ✅ PASS
-```
 
 ### List Optimization Details
 ```typescript
