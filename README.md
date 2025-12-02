@@ -17,8 +17,7 @@ It efficiently renders 1000+ users, performs heavy analytics, supports real-time
 
 
 🚀 Live Preview (Expo)
-https://expo.dev/…
-
+(https://expo.dev/artifacts/eas/wduWgjMmfqAE78CaLQoxsm.aab)
 ------------------------------------------------
 🧱 Tech Stack
 
