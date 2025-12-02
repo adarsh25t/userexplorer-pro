@@ -1,5 +1,10 @@
 # 📘 UserExplorer Pro — React Native + Expo App 👋
 
+UserExplorer Pro is a high-performance, offline-first, analytics-driven mobile application built using Expo (React Native) and Redux Toolkit.
+It efficiently renders 1000+ users, performs heavy analytics, supports real-time search, multi-filtering, favorites, and achieves smooth performance even on low-end devices.
+
+
+
 🚀 Live Preview (Expo)
 https://expo.dev/…
 
@@ -64,20 +69,89 @@ src/
 
 ------------------------------------------------------
 
-🧠 Architecture Decision Summary
-✔ Expo Router for Navigation
+🧩 Features Implemented
+✔ High-Performance User List
 
-Simple file-based navigation, modern Expo standard.
+Handles 1000+ users from API
 
-✔ Redux Toolkit
+Optimized FlatList (batching, clipping, window size)
 
-* Stable global state
-* Selectors prevent unnecessary re-renders
-* Clean slices (users, filters, favorites)
+Memoized UserCard
 
-✔ Data Flow
+Pull-to-refresh
 
-```
-loadCache() → read cached users
-fetchUsers() → fetch new users
-```
+Smooth scrolling on low-end devices
+
+✔ Offline-First Architecture
+
+Loads cached data instantly
+
+Fetches fresh data in background
+
+Merges intelligently (deduped by UUID)
+
+Zero visible delay after first run
+
+✔ Real-Time Search + Multi-Filters
+
+Search by first name, last name, and email
+
+Filter by gender (male/female)
+
+Filter by country (generated dynamically)
+
+Instant updates with zero UI stutter
+
+Memoized filtered list
+
+✔ Favorites System
+
+Add/remove favorites globally
+
+Favorites screen with count
+
+Cached and persistent
+
+✔ Full Analytics Dashboard
+
+Total users
+
+Countries count
+
+Average age
+
+Median age
+
+Oldest & youngest
+
+Gender breakdown (count + percent)
+
+Age distribution by decade
+
+Top 10 countries
+
+Insight cards
+
+✔ Smooth Navigation
+
+Bottom tabs (Home, Analytics, Favorites)
+
+Stack navigation for additional screens
+
+✔ Clean & Modern UI
+
+Professional color theme
+
+Rounded cards
+
+Shadows & spacing
+
+Reusable components
+
+✔ Error Handling
+
+Graceful error state
+
+Retry button
+
+Auto-cancels pending requests with AbortController
