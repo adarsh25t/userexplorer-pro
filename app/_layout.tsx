@@ -7,11 +7,6 @@ export default function RootLayout() {
   return (
     <Provider store={store}>
       <>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor="#1A2E46"
-          translucent={true}
-        />
         <Stack
           screenOptions={{
             headerShown: false,
@@ -21,7 +16,6 @@ export default function RootLayout() {
           <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
 
           {/* Other Screens outside tabs */}
-          <Stack.Screen name="UserDetailsScreen" options={{ headerShown: false }} />
           <Stack.Screen name="Notifications" options={{ headerShown: false }} />
         </Stack>
       </>
