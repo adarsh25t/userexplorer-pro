@@ -11,8 +11,8 @@ It efficiently renders 1000+ users, performs heavy analytics, supports real-time
 
 <img width="285" height="826" alt="Screenshot 2025-12-02 233844" src="https://github.com/user-attachments/assets/73652cf3-06a9-401f-95fc-e6be487312f8" />
 
+<img width="757" height="826" alt="Screenshot 2025-12-02 234045" src="https://github.com/user-attachments/assets/6704ac4d-0a6c-499f-98ad-ddc391a92607" />
 
-<img width="257" height="826" alt="Screenshot 2025-12-02 234045" src="https://github.com/user-attachments/assets/bab9bcf2-6dac-4d76-964f-a6175099d9c4" />
 <img width="282" height="812" alt="Screenshot 2025-12-02 234035" src="https://github.com/user-attachments/assets/660f8a2d-fabe-4e1b-a7a5-e66f339ed23b" />
 
 
