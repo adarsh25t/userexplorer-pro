@@ -3,6 +3,8 @@
 UserExplorer Pro is a high-performance, offline-first, analytics-driven mobile application built using Expo (React Native) and Redux Toolkit.
 It efficiently renders 1000+ users, performs heavy analytics, supports real-time search, multi-filtering, favorites, and achieves smooth performance even on low-end devices.
 
+<img width="385" height="832" alt="Screenshot 2025-12-02 233707" src="https://github.com/user-attachments/assets/93ad3409-b62c-4c16-abf1-0208aa44b28c" />
+
 
 
 🚀 Live Preview (Expo)
@@ -145,8 +147,6 @@ removeClippedSubviews={true}
 showsVerticalScrollIndicator={false}
 ```
 
---------------------------------------------------------------
-
 🔹 Memoization
 
   * useMemo for filtered list
@@ -174,8 +174,6 @@ showsVerticalScrollIndicator={false}
 
 🧠 Architecture Decisions
 ✔ Redux Toolkit
-
-Chosen for:
 
   * Predictable global state
   * Immutable reducer logic
@@ -213,3 +211,10 @@ Build:
 eas build -p android
 eas build -p ios
 ```
+
+
+👨‍💻 Author
+
+Adarsh
+Full Stack & Mobile Developer
+React Native • Expo • TypeScript • Node.js • AWS
