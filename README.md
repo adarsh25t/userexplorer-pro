@@ -3,11 +3,11 @@
 A production-grade, high-performance mobile application demonstrating advanced React Native optimization techniques, offline-first architecture, and complex state management on 1000+ concurrent items.
 
 📋 Quick Overview
-  ✅ Loads 1000 users smoothly - 60 FPS scrolling even on slow phones
-  ✅ Works offline - Instant first load from cache (~200ms)
-  ✅ Search & filters - No lag, instant results
-  ✅ Analytics dashboard - Complex calculations without freezing UI
-  ✅ Clean code - TypeScript, Redux, proper architecture
+  * ✅ Loads 1000 users smoothly - 60 FPS scrolling even on slow phones
+  * ✅ Works offline - Instant first load from cache (~200ms)
+  * ✅ Search & filters - No lag, instant results
+  * ✅ Analytics dashboard - Complex calculations without freezing UI
+  * ✅ Clean code - TypeScript, Redux, proper architecture
 
 <img width="285" height="832" alt="Screenshot 2025-12-02 233707" src="https://github.com/user-attachments/assets/93ad3409-b62c-4c16-abf1-0208aa44b28c" />
 
