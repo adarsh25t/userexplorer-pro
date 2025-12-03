@@ -65,7 +65,6 @@ A production-grade, high-performance mobile application demonstrating advanced R
   removeClippedSubviews={true}       // Clean up off-screen views
   scrollIndicatorInsets={{ right: 1 }}
 />
-// Result: 1000 items scroll @ 60 FPS, ~85MB RAM
 ```
 
 ### Search & Filter Optimization
@@ -79,7 +78,6 @@ With optimization:
   ↓ FlatList gets ~50 filtered items
   ↓ Only 50 cards render (React.memo prevents unnecessary re-renders)
   
-Result: Zero UI stutter, instant feedback
 ```
 
 ---
